@@ -1,7 +1,25 @@
 #!/usr/bin/env node
 var debug = require('debug')('MovieFinder');
 var app = require('../app');
+cp = require('child_process');
 
+// Start Movie Fetching Script
+var ls = cp.exec('python ./Service/fetcher.py', function (error, stdout, stderr) {
+    if (error) {
+        console.log(error.stack);
+        console.log('Error code: '+error.code);
+        console.log('Signal received: '+error.signal);
+    }
+    console.log('stdout: ' + stdout);
+    console.log('stderr: ' + stderr);
+       
+});
+    
+ls.on('exit', function (code) {
+    console.log('MovieFetcher exited with exit code '+code);
+});
+
+// Start Web Host
 app.set('port', process.env.PORT || 3000);
 
 var server = app.listen(app.get('port'), function() {
