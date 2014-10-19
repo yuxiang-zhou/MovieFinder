@@ -19,6 +19,10 @@ ls.on('exit', function (code) {
     console.log('MovieFetcher exited with exit code '+code);
 });
 
+if (process.argv[2]){
+    process.env.PORT = process.argv[2]
+}
+
 // Start Web Host
 app.set('port', process.env.PORT || 3000);
 
