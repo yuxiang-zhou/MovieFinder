@@ -4,7 +4,7 @@ var app = require('../app');
 cp = require('child_process');
 
 // Start Movie Fetching Script
-var ls = cp.exec('node ./bin/moviefetcher.js', function (error, stdout, stderr) {
+var ls = cp.exec('python ./Service/fetcher.py', function (error, stdout, stderr) {
     if (error) {
         console.log(error.stack);
         console.log('Error code: '+error.code);
