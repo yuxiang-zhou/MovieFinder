@@ -1,8 +1,59 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.nav_wrapper a {
+	color:white;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 60px;      
+}
+
+.nav_child {
+	border-right: thick double #white;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.page_wrapper{
+	background-color: lightgrey;
+	height:500px;
+}
+
+.moviePage_nav{
+	background-color: white;
+	margin-top:10px;
+	height:35px;
+	position:relative;
+}
+
+.movieByX_wrapper{
+}
+
+.movieByX_wrapper .dropdown-menu{
+	border-radius: 0px;
+	margin:0;
+}
+
+#movieByX{
+	text-align: center;
+}
+
+.commercial_space{
+	margin-top:10px;
+	background-color: white;
+	height:100px;
+}
+
+.vertical_middle{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#moviePage_movie_count{
+	margin:0;
+	text-align:right;
 }
