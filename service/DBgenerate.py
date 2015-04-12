@@ -1,5 +1,4 @@
 from moviegetter import *
-import logging
 
-MovieGetter.buildCinemaDB()
+# MovieGetter.buildCinemaDB()
 MovieGetter.updateMovies()

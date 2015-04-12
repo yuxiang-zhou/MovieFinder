@@ -2,3 +2,5 @@ run
 data/
 run.bat
 *.pyc
+node_modules/
+*.log

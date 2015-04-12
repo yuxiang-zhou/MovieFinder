@@ -4,20 +4,20 @@ var app = require('../app');
 cp = require('child_process');
 
 // Start Movie Fetching Script
-var ls = cp.exec('python ./service/fetcher.py', function (error, stdout, stderr) {
-    if (error) {
-        console.log(error.stack);
-        console.log('Error code: '+error.code);
-        console.log('Signal received: '+error.signal);
-    }
-    console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
+// var ls = cp.exec('python ./service/fetcher.py', function (error, stdout, stderr) {
+//     if (error) {
+//         console.log(error.stack);
+//         console.log('Error code: '+error.code);
+//         console.log('Signal received: '+error.signal);
+//     }
+//     console.log('stdout: ' + stdout);
+//     console.log('stderr: ' + stderr);
        
-});
+// });
     
-ls.on('exit', function (code) {
-    console.log('MovieFetcher exited with exit code '+code);
-});
+// ls.on('exit', function (code) {
+//     console.log('MovieFetcher exited with exit code '+code);
+// });
 
 if (process.argv[2]){
     process.env.PORT = process.argv[2]
