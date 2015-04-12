@@ -1,9 +1,13 @@
 doctype html
 html
     head
-        title You Can Find MORE Than You Want!
-        link(rel='stylesheet', href='/stylesheets/style.css')
+        title You Can Find MORE Than You Want!   
+        link(rel='stylesheet', href='/stylesheets/style.css')   
+        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')      
     body
-        block content
-        script(src='/javascripts/global.js')
+        include navbar
+        block home-movie
+        script(src='/javascripts/jquery-1.11.1.min.js')         
+        script(src='/javascripts/bootstrap.min.js')  
+        script(src='/javascripts/global.js')        
         block script
