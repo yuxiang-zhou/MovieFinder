@@ -1,7 +1,31 @@
-extends layout
+extends layout.jade
 
-block content
-	h1= title
-	p Welcome to #{title}
-	#test.test
-		span jf
+block home-movie
+    .container-fluid
+        .row.page_wrapper   
+            .col-sm-2(style='padding-right:0')
+                .container-fluid.commercial_space
+                    p ad
+            .col-sm-8
+                .container-fluid
+                    //showcase movies by filter
+                    .row.moviePage_nav
+                        .col-sm-8.movieByX_wrapper.vertical_middle  
+                            .dropdown   
+                                button#movieByX(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                    | Dropdown
+                                    span.caret 
+                                ul.dropdown-menu(role='menu', aria-labelledby='movieByX')
+                                    li(role='presentation')
+                                        a(role='menuitem', tabindex='-1', href='#') By popularity           
+                                    li(role='presentation')
+                                        a(role='menuitem', tabindex='-1', href='#') By rating               
+                                    li(role='presentation')
+                                        a(role='menuitem', tabindex='-1', href='#') By release date                                
+                        .col-sm-4.vertical_middle
+                            p#moviePage_movie_count 100 movies
+                    .row
+            .col-sm-2(style='padding-left:0')
+                .container-fluid.commercial_space
+                    p ad
+        
